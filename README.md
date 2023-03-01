@@ -7,5 +7,3 @@
 ## Checkbox Switch
 
 ![Checkbox Switch](res/checkbox.gif)
-
-<style>img {width:50%}</style>
