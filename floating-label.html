@@ -1,0 +1,69 @@
+<div class="fl-container">
+    <input type="text" class="fl-input" id="fl-input" required>
+    <label for="fl-input" class="fl-label">Floating Label</label>
+</div>
+
+<style>
+    :root {
+        --active-background: #ffffff;
+        --active-color: #2196F3;
+        --label-color: #495057;
+        --label-light-color: #6c757d;
+        --border-color: #ced4da;
+    }
+
+    .fl-container {
+        position: relative;
+        width: fit-content;
+        margin-top: .5rem;
+    }
+
+    .fl-container .fl-input[type="text"],
+    .fl-container .fl-input[type="email"],
+    .fl-container .fl-input[type="password"],
+    .fl-container .fl-input[type="number"] {
+        font-size: 1rem;
+        padding: .5rem 0 .5rem .5rem;
+        border: .125rem solid var(--border-color);
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .fl-container .fl-label {
+        font-size: 1rem;
+        color: var(--label-color);
+        position: absolute;
+        inset: 0 auto auto 0;
+        padding: .6rem .5rem;
+        pointer-events: none;
+        transition: all .15s ease-in-out;
+    }
+
+    .fl-container .fl-input:focus~.fl-label,
+    .fl-container .fl-input:valid~.fl-label {
+        font-size: .75rem;
+        font-weight: bold;
+        color: var(--active-color);
+        background-color: var(--active-background);
+        inset: -1.9rem auto auto .5rem;
+        padding: 1.5rem .2rem 0;
+    }
+
+    .fl-container .fl-input:valid:not(:focus)~.fl-label {
+        color: var(--label-light-color);
+    }
+
+    .fl-container .fl-input:focus {
+        border: .125rem solid var(--active-color);
+        outline: 0;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
