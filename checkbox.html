@@ -1,0 +1,57 @@
+<input type="checkbox" name="" id="checkbox" class="checkbox-input">
+<label for="checkbox" class="checkbox-label no-select">On/Off:</label>
+
+<style>
+    .checkbox-input {
+        display: none;
+    }
+
+    .checkbox-label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .checkbox-label::before,
+    .checkbox-label::after {
+        content: "";
+        height: 1rem;
+        display: inline-block;
+        position: relative;
+        order: 1;
+        border-radius: 1rem;
+    }
+
+    .checkbox-label::before {
+        width: 2rem;
+        background-color: grey;
+        border: .07rem solid #000;
+        filter: drop-shadow(.065rem .065rem .065rem rgba(60, 60, 60, 0.4));
+        transition: background-color .5s;
+        margin-left: .3rem;
+    }
+
+    .checkbox-label::after {
+        width: 1rem;
+        background-color: #fff;
+        transition: transform .5s;
+        right: 2.065rem;
+    }
+
+    .checkbox-input:is(:checked)+.checkbox-label::before {
+        background-color: #006dff;
+    }
+
+    .checkbox-input:is(:checked)+.checkbox-label::after {
+        transform: translateX(1rem);
+    }
+
+    .no-select {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
