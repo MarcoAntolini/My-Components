@@ -1,9 +1,9 @@
 # My Components
 
-## Floating Label Input
+## [Floating Label](src/floating-label.html)
 
-![Floating Label Input](res/floating-label.gif)
+![Floating Label](res/floating-label.gif)
 
-## Checkbox Switch
+## [Checkbox Switch](src/checkbox.html)
 
 ![Checkbox Switch](res/checkbox.gif)
