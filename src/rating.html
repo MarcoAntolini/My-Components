@@ -1,0 +1,47 @@
+<div class="rating r1"></div>
+<div class="rating r2"></div>
+<div class="rating r3"></div>
+<div class="rating r4"></div>
+<div class="rating r5"></div>
+
+<style>
+    .rating {
+        display: inline-block;
+        font-size: 3em;
+        position: relative;
+        width: fit-content;
+    }
+
+    .r1::before {
+        content: "\1F641";
+    }
+
+    .r2::before {
+        content: "\1F610";
+    }
+
+    .r3::before {
+        content: "\1F642";
+    }
+
+    .r4::before {
+        content: "\1F603";
+    }
+
+    .r5::before {
+        content: "\1F602";
+    }
+
+    .rating::before {
+        filter: grayscale(100%);
+    }
+
+    .r1:hover::before {
+        filter: grayscale(0%);
+    }
+
+    .r2:hover::before,
+    .r2:hover~.r1::before {
+        filter: grayscale(0%);
+    }
+</style>
