@@ -1,15 +1,22 @@
-<div class="rating r1"></div>
-<div class="rating r2"></div>
-<div class="rating r3"></div>
-<div class="rating r4"></div>
-<div class="rating r5"></div>
+<div class="ratings-container">
+    <input type="radio" name="rating" class="rating r5">
+    <input type="radio" name="rating" class="rating r4">
+    <input type="radio" name="rating" class="rating r3">
+    <input type="radio" name="rating" class="rating r2">
+    <input type="radio" name="rating" class="rating r1">
+</div>
 
 <style>
+    .ratings-container {
+        display: inline-flex;
+        flex-direction: row-reverse;
+    }
+
     .rating {
-        display: inline-block;
-        font-size: 3em;
+        visibility: hidden;
         position: relative;
         width: fit-content;
+        margin: 0;
     }
 
     .r1::before {
@@ -33,15 +40,39 @@
     }
 
     .rating::before {
+        visibility: visible;
+        display: inline-block;
         filter: grayscale(100%);
+        width: fit-content;
     }
 
-    .r1:hover::before {
+    .r1:is(:hover, :checked)::before {
         filter: grayscale(0%);
     }
 
-    .r2:hover::before,
-    .r2:hover~.r1::before {
+    .r2:is(:hover, :checked)::before,
+    .r2:is(:hover, :checked)~.r1::before {
+        filter: grayscale(0%);
+    }
+
+    .r3:is(:hover, :checked)::before,
+    .r3:is(:hover, :checked)~.r2::before,
+    .r3:is(:hover, :checked)~.r1::before {
+        filter: grayscale(0%);
+    }
+
+    .r4:is(:hover, :checked)::before,
+    .r4:is(:hover, :checked)~.r3::before,
+    .r4:is(:hover, :checked)~.r2::before,
+    .r4:is(:hover, :checked)~.r1::before {
+        filter: grayscale(0%);
+    }
+
+    .r5:is(:hover, :checked)::before,
+    .r5:is(:hover, :checked)~.r4::before,
+    .r5:is(:hover, :checked)~.r3::before,
+    .r5:is(:hover, :checked)~.r2::before,
+    .r5:is(:hover, :checked)~.r1::before {
         filter: grayscale(0%);
     }
 </style>
