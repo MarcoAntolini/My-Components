@@ -1,0 +1,24 @@
+:root {
+	--max-width: 200px;
+	--max-height: 50px;
+}
+
+html, body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#title {
+	font-size: 2em;
+	font-weight: bold;
+	position: fixed;
+	top: 20px;
+}
+
+img {
+	max-width: var(--max-width);
+	max-height: var(--max-height);
+}
