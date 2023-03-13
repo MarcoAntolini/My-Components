@@ -1,9 +1,9 @@
 <div class="ratings-container">
-    <input type="radio" name="rating" class="rating r5">
-    <input type="radio" name="rating" class="rating r4">
-    <input type="radio" name="rating" class="rating r3">
-    <input type="radio" name="rating" class="rating r2">
-    <input type="radio" name="rating" class="rating r1">
+    <input type="radio" name="rating" class="rating r5" />
+    <input type="radio" name="rating" class="rating r4" />
+    <input type="radio" name="rating" class="rating r3" />
+    <input type="radio" name="rating" class="rating r2" />
+    <input type="radio" name="rating" class="rating r1" />
 </div>
 
 <style>
@@ -51,28 +51,28 @@
     }
 
     .r2:is(:hover, :checked)::before,
-    .r2:is(:hover, :checked)~.r1::before {
+    .r2:is(:hover, :checked) ~ .r1::before {
         filter: grayscale(0%);
     }
 
     .r3:is(:hover, :checked)::before,
-    .r3:is(:hover, :checked)~.r2::before,
-    .r3:is(:hover, :checked)~.r1::before {
+    .r3:is(:hover, :checked) ~ .r2::before,
+    .r3:is(:hover, :checked) ~ .r1::before {
         filter: grayscale(0%);
     }
 
     .r4:is(:hover, :checked)::before,
-    .r4:is(:hover, :checked)~.r3::before,
-    .r4:is(:hover, :checked)~.r2::before,
-    .r4:is(:hover, :checked)~.r1::before {
+    .r4:is(:hover, :checked) ~ .r3::before,
+    .r4:is(:hover, :checked) ~ .r2::before,
+    .r4:is(:hover, :checked) ~ .r1::before {
         filter: grayscale(0%);
     }
 
     .r5:is(:hover, :checked)::before,
-    .r5:is(:hover, :checked)~.r4::before,
-    .r5:is(:hover, :checked)~.r3::before,
-    .r5:is(:hover, :checked)~.r2::before,
-    .r5:is(:hover, :checked)~.r1::before {
+    .r5:is(:hover, :checked) ~ .r4::before,
+    .r5:is(:hover, :checked) ~ .r3::before,
+    .r5:is(:hover, :checked) ~ .r2::before,
+    .r5:is(:hover, :checked) ~ .r1::before {
         filter: grayscale(0%);
     }
 </style>

@@ -1,4 +1,4 @@
-<input type="checkbox" name="" id="checkbox" class="checkbox-input">
+<input type="checkbox" name="" id="checkbox" class="checkbox-input" />
 <label for="checkbox" class="checkbox-label no-select">On/Off:</label>
 
 <style>
@@ -26,24 +26,24 @@
     .checkbox-label::before {
         width: 2rem;
         background-color: grey;
-        border: .07rem solid #000;
-        filter: drop-shadow(.065rem .065rem .065rem rgba(60, 60, 60, 0.4));
-        transition: background-color .5s;
-        margin-left: .3rem;
+        border: 0.07rem solid #000;
+        filter: drop-shadow(0.065rem 0.065rem 0.065rem rgba(60, 60, 60, 0.4));
+        transition: background-color 0.5s;
+        margin-left: 0.3rem;
     }
 
     .checkbox-label::after {
         width: 1rem;
         background: linear-gradient(315deg, #ffffff, #e6e6e6);
-        transition: transform .5s;
+        transition: transform 0.5s;
         right: 2.065rem;
     }
 
-    .checkbox-input:is(:checked)+.checkbox-label::before {
+    .checkbox-input:is(:checked) + .checkbox-label::before {
         background-color: #006dff;
     }
 
-    .checkbox-input:is(:checked)+.checkbox-label::after {
+    .checkbox-input:is(:checked) + .checkbox-label::after {
         transform: translateX(1rem);
     }
 
